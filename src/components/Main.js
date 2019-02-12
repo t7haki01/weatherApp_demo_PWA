@@ -4,7 +4,9 @@ import cityList from '../city.list.json';
 import Detail from './Detail';
 import { Route, Switch, Link } from 'react-router-dom';
 import IndexedDb from './IndexedDb';
+// import Worker from ".Worker"
 import Autocomplete from 'react-autocomplete';
+
 const apiKey = "e7c2d7e0bc57d08250f0b63cde630511";
 
 var cityData = [];
@@ -238,6 +240,9 @@ class Main extends Component{
     }
 
     onChange (e) {
+
+        // var worker = new Worker('Worker.js')
+
         var dataList = document.getElementById("listOfCity");
         while(dataList.firstChild){
             dataList.removeChild(dataList.firstChild);
